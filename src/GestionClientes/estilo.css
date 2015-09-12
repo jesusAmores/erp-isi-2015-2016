@@ -1,9 +1,134 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 24-nov-2015, 18:09:57
-    Author     : jesus
-*/
+/*pagina de registro*/
+.total{
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	/*background-color:ff0000;*/
+}
+.central{
+	width:1024px;
+	height:768px;
+	/*background-color:660000;*/
+	position:relative;
+	top:0px;
+}
+
+#login{
+	width:100%;
+	height:130px;
+	/*background-color:red;*/
+	position:relative;
+
+}
+#logo{
+	width:512px;
+	height:91px;
+	/*background-color:red;*/
+	top:0px;
+	left:0px;
+	position:absolute;
+}
+#login_form{
+	width:512px;
+	/*background-color:red;*/
+	height:91px;
+	top:0px;
+	left:505px;
+	position:absolute;
+}
+#publi{
+	position:absolute;
+	width:54%;
+	height:92%;
+	left:0px;
+	/*background-color:green;*/
+}
+#registro{
+	position:absolute;
+	left:55%;
+}
+/*LETRAS Y TEXTBOX DEL LOGIN*/
+.text_log{
+	font-size:13px;
+	/*background-color:red;*/
+}
+/*LETRAS Y TEXTBOX DEL REGISTRO*/
+.reg_text{
+	width:211px;
+	height:28px;
+	font-size:13px;
+	/*background-color:red;*/
+}
+.reg_textnac{
+	height:28px;
+	font-size:13px;
+	/*background-color:red;*/
+}
+.letra_reg{
+	font-size:18px;
+}
+#usuario_login{
+	position:relative;
+	/*background-color:red;*/
+	top:250px;
+}
+#publi_login_ok{
+	position:relative;
+	/*background-color:red;*/
+	width:500px;
+	height:200px;
+	top:280px;
+}
+
+/*PAGINA PRINCIPAL*/
+.central_princ{
+	width:1024px;
+	height:768px;
+	/*background-color:blue;*/
+	position:relative;
+	top:0px;
+}
+
+#banner_princ{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0px;
+	/*background-color:red;*/
+}
+#centre_princ{
+	width:794px;
+	/*height:723px;*/
+	position:absolute;
+	top:45px;
+	left:230px;
+	background-color:green;
+
+}
+#izq_princ{
+	width:230px;
+	/*background-color:yellow;*/
+	position:absolute;
+	top:45px
+}
+#derech_princ{
+	
+}
+.mens_infor{
+	color:#ff0000;
+}
+/*PAGINA DE FOTO*/
+#thumbs{
+	position:absolute;
+	width:50px;
+	height:50px;
+	margin-top:60px;
+	margin-left:60px;
+	margin-right:60px;
+	left:10px;
+}
+#tamano_text_newalbum{
+	width:120px;
+}
