@@ -12,8 +12,14 @@ class BD extends SQLite3
         $this->open('practica2.db');
     }
     
-    function lista_usuarios() {
+    function lista_usuarios($campo,$nombre) {
+        if($campo)
+            if($nombre)
+                return $this->query('SELECT * FROM USUARIOS WHERE name like %$nombre% ORDER BY $campo');
         return $this->query('SELECT * FROM USUARIOS');
+    }
+    function nuevoUsuario(){
+        
     }
 }
 
