@@ -11,7 +11,7 @@ $resultado=$bd->lista_usuarios();
  */  
 
 $resp = array();
-$resp["Uno"] = "Nacho no sabe: ".strtoupper($_POST['dato'])." ".date(DATE_RFC2822);
+$resp["Uno"] = "Nacho es de: ".strtoupper($_POST['dato'])." ".date(DATE_RFC2822);
 $resp["Dos"] = "---";
 $resp["Tres"]=$row[1];
  }
