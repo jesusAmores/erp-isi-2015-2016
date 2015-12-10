@@ -9,19 +9,19 @@
 class BD extends SQLite3
 {
     function __construct() {
-        $this->open('practica2.db');
+        $this->open('usuario.db');
     }
     
     function lista_usuarios($campo,$nombre) {
         if($campo)
             if($nombre)
-                return $this->query('SELECT * FROM USUARIOS WHERE name like %$nombre% ORDER BY $campo');
-        return $this->query('SELECT * FROM USUARIOS');
+                return $this->query('SELECT * FROM usuarios WHERE nombre like %$nombre% ORDER BY $campo');
+        return $this->query('SELECT * FROM usuarios');
     }
 
 
-
-function nuevoUsuario($nombre,$apellidos,$contra,$fecha_reg,$fecha_nac,$sexo,$mail,$pai){/*DIVIDIRLO ENTRE VALIDAR REGISTRO Y REGISTRAR*/
+/*
+function nuevoUsuario($nombre,$apellidos,$contra,$fecha_reg,$fecha_nac,$sexo,$mail,$pai){
 	if($_POST['acepta_registro']){
 		$verd=0;
 		if($_POST['nombre_registro']){
@@ -88,7 +88,7 @@ function nuevoUsuario($nombre,$apellidos,$contra,$fecha_reg,$fecha_nac,$sexo,$ma
 			<font color="red">Ponga una contraseña</font>
 			<?
 			$verd=0;
-		}/**/
+		}
 			$fecha_reg=quitar(date(y-m-d));
 			mt_srand(time());
 			$alea=mt_rand(0,10000000000);
@@ -106,7 +106,7 @@ function nuevoUsuario($nombre,$apellidos,$contra,$fecha_reg,$fecha_nac,$sexo,$ma
 	}
 }
 
-
+*/
 function ModificaUsuario(){/*SIN EMPEZAR*/
 	
 }
@@ -114,7 +114,7 @@ function ModificaUsuario(){/*SIN EMPEZAR*/
 function BorraUsuario(){/*SIM EMPEZAR*/
 	
 }
-
+/*
 function MuestraUsuarioBusqueda($nombre,$orden){
 	if($nombre==NULL){
 		$cons=mysql_query("select * from music order by $orden");
@@ -128,9 +128,8 @@ function MuestraUsuarioBusqueda($nombre,$orden){
 			<td><a href="borrar.php?id=<?echo $id;?>"><input type="button" value="borrar"></a></td>
 			<td><a href="editar.php?id=<?echo $id;?>"><input type="button" value="editar"></a></td>
 			<td></td>
-		</tr><?
+		</tr><?php
 	}
+}*/ 
 }
-}
-
 ?>
