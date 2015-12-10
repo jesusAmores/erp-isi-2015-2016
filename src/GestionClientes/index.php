@@ -2,7 +2,7 @@
 <!--
     Ejemplo comunicaci�n jQuery con JSON.
 -->
-<html>
+<!--<html>
     <head>
         <title>jQuery PHP 1</title>
         <meta charset="ISO-8859-15">
@@ -72,18 +72,21 @@
 </html>
 
 <!-- probar
-<html>
-	<head>
-		<title>Gente</title>
-		<link rel="stylesheet" type="text/css" href="estilos.css" title="default"> 
-	</head>
-	<body>
-		<div class="total">
+--><html>
+    <head>
+        <title>Gente</title>
+        <meta charset="ISO-8859-15">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="estilos.css" title="default"> 
+    </head>
+    <body>
+        <div class="total">
 			<center>
 				<div class="central_princ">
 					<div id="banner_princ">
-						<?
-							MuestraBanner();
+						<?php
+							//MuestraBanner();
 						?>
 					</div>
 					<div id="izq_princ">
@@ -99,4 +102,4 @@
 		</div>
 	</body>
 </html>
--->
+<!---->
