@@ -15,13 +15,7 @@
 	top:0px;
 }
 
-#login{
-	width:100%;
-	height:130px;
-	/*background-color:red;*/
-	position:relative;
 
-}
 #logo{
 	width:512px;
 	height:91px;
@@ -84,9 +78,9 @@
 
 /*PAGINA PRINCIPAL*/
 .central_princ{
-	width:1024px;
+	width:100%;
 	height:768px;
-	/*background-color:blue;*/
+	background-color:blue;
 	position:relative;
 	top:0px;
 }
@@ -99,12 +93,12 @@
 	/*background-color:red;*/
 }
 #centre_princ{
-	width:794px;
+	width:100%;
 	/*height:723px;*/
 	position:absolute;
 	top:45px;
-	left:230px;
-	background-color:green;
+	
+	/*background-color:green;+/
 
 }
 #izq_princ{
@@ -132,3 +126,13 @@
 #tamano_text_newalbum{
 	width:120px;
 }
+.usuario{
+    position:relative;
+    background-color: red;
+}
+#idNombre{}
+#divApellido{}
+#divCorreo{}
+#divFechaRegistro{}
+#divfechaNac{}
+#divpass{}

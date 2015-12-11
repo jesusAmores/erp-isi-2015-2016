@@ -3,7 +3,7 @@
 <!--
     Ejemplo comunicaci�n jQuery con JSON.
 -->
-<html>
+<!--<html>
     <head>
         <title>jQuery PHP 1</title>
         <meta charset="ISO-8859-15">
@@ -68,33 +68,35 @@
     </body>
 </html>
 
-<!-- probar
+<!-- probar-->
+<?php include_once ("backend.php");?>
 <html>
     <head>
         <title>usuarios</title>
         <meta charset="ISO-8859-15">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="estilos.css" title="default"> 
+        <link rel="stylesheet" type="text/css" href="estilo.css" title="default"> 
     </head> 
     <body>
         <div class="total">
 			<center>
 				<div class="central_princ">
 					<div id="banner_princ">
-						
+						<?php muestraBanner();?>
 					</div>
-					<div id="izq_princ">
-					
-					</div>
+
 					<div id="centre_princ">
-						<?
-							MuestraAmigos();
+                                            <table>
+						<?php
+							MuestraUsuarioBusqueda();
+                                                        
 						?>
+                                            </table>
 					</div>
 				</div>
 			</center>
 		</div>
 	</body>
-</html>-->
+</html>
 <!---->
