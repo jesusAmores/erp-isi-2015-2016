@@ -4,6 +4,6 @@
         return $handle;
     } 
     $bd= sqlite_open();
-   $bd->query("delete from usuarios where id=2");
+   $bd->query("delete from usuarios where Id= $_GET[id]");
 ?>
 
