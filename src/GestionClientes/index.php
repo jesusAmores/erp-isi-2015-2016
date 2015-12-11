@@ -76,7 +76,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <link rel="stylesheet" type="text/css" href="estilos.css" title="default"> 
-    </head>
+    </head> 
     <body>
         <div class="total">
 			<center>
