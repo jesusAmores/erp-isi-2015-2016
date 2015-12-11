@@ -12,11 +12,12 @@ class BD extends SQLite3
         $this->open('usuario.db');
     }
     
-    function lista_usuarios($campo,$nombre) {
-        if($campo)
-            if($nombre)
-                return $this->query('SELECT * FROM usuarios WHERE nombre like %$nombre% ORDER BY $campo');
-        return $this->query('SELECT * FROM usuarios');
+    function lista_usuarios() {
+
+        if($nombre)
+            return $this->query('SELECT * FROM usuarios WHERE nombre like %hugo% ORDER BY $campo');
+        else
+            return $this->query('SELECT * FROM usuarios');
     }
 
 
