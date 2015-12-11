@@ -22,17 +22,17 @@
                     <div id="centre_princ">
                         <form>
                             <input type=""/>
-                            <input type="submit" value="buscar" name="nombre" onClick=""></input>
-                            <table>
+                            <input type="submit" value="buscar" name="aceptar" onClick=""></input>
+                            <table border="1">
                                 <tr>
-			<td>Nombre</td>
-			<td>apellidos</td>
-                        <td>correo elecronico</td>
-                        <td>contrase&ntilde;a</td>
-                        <td>Fecha de nacimiento</td>
-                        <td>Fecha de registro</td>
-                        <td colspan="2">acciones</td>
-            </tr>
+                                <td><a href="">Nombre</a></td>
+                                    <td>apellidos</td>
+                                    <td>correo elecronico</td>
+                                    <td>contrase&ntilde;a</td>
+                                    <td>Fecha de nacimiento</td>
+                                    <td>Fecha de registro</td>
+                                    <td colspan="2">acciones</td>
+                                </tr>
                                 <?php MuestraUsuarioBusqueda();?>
                             </table>
                         </form>

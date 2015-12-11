@@ -26,8 +26,8 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-			<td><a href="editar.php?id=<?echo $id;?>"><input type="button" value="editar"></a></td>
-			<td><a href="borrar.php?id=<?echo $id;?>"><input type="button" value="borrar"></a></td>
+			<td><a href="editar.php?id=<?php echo $id;?>"><input type="button" value="editar"></a></td>
+			<td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar"></a></td>
 			<td></td>
             </tr>
       <?php }else{?>
@@ -38,11 +38,15 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><a href="editar.php?id=<?echo $id;?>"><input type="button" value="editar"></a></td>
-			<td><a href="borrar.php?id=<?echo $id;?>"><input type="button" value="borrar"></a></td>
+                        <td><a href="editar.php?id=<?echo $row[0];?>"><input type="button" value="editar"></a></td>
+			<td><a href=<?php borrarUsuario($row[0]);?>><input type="button" value="borrar"></a></td>
             </tr>
             <?php }
             $i+=1;
 	}
+}
+function borrarUsuario($id){
+    $bd=sqlite_open();
+    
 }
 ?>
