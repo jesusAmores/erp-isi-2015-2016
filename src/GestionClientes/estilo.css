@@ -80,7 +80,6 @@
 .central_princ{
 	width:100%;
 	height:768px;
-	background-color:blue;
 	position:relative;
 	top:0px;
 }
@@ -90,20 +89,15 @@
 	height:45px;
 	position:absolute;
 	top:0px;
-	/*background-color:red;*/
 }
 #centre_princ{
 	width:100%;
 	/*height:723px;*/
 	position:absolute;
 	top:45px;
-	
-	/*background-color:green;+/
-
 }
 #izq_princ{
 	width:230px;
-	/*background-color:yellow;*/
 	position:absolute;
 	top:45px
 }
@@ -123,9 +117,10 @@
 	margin-right:60px;
 	left:10px;
 }
-#tamano_text_newalbum{
-	width:120px;
+#FilaPar{
+    background-color: grey;
 }
+
 .usuario{
     position:relative;
     background-color: red;
