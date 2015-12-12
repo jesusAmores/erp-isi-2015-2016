@@ -24,7 +24,7 @@
 
             while($row=$cons->fetchArray()){
             if($i%2==0){
-		?><tr id="FilaPar">
+		?><tr id="FilaImpar">
                         <td><?php echo $row[0];?></td>
 			<td><?php echo $row[1];?></td>
 			<td><?php echo $row[2];?></td>
@@ -38,7 +38,7 @@
             </tr>
       <?php }else{?>
                 <tr>
-                    <td><?php echo $row[0];?></td>
+                        <td><?php echo $row[0];?></td>
 			<td><?php echo $row[1];?></td>
 			<td><?php echo $row[2];?></td>
                         <td><?php echo $row[3];?></td>
