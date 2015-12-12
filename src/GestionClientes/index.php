@@ -38,7 +38,8 @@
                                 <?php MuestraUsuarioBusqueda($_GET['nombre'],$_GET['orden']);?>
                             </table>
                         </form>
-                        <input type="button" value="a&ntilde;adir usuario"/>
+                        <!--<input type="button" value="a&ntilde;adir usuario"/>-->
+                        <td><a href="aniadirClientes.php?"><input type="button" value="a&ntilde;adir usuario"></a></td>
                     </div>
 		</div>
             </center>
