@@ -52,10 +52,10 @@
             <?php
               
                     $bd=sqlite_open();
-                    $bd->query("INSERT INTO usuarios(id,nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['id']}','{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
+                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
                     
+                                   
                     
-                    //echo 'Cliente añadido!!!!';
                     
                 
                 

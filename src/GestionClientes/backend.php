@@ -45,7 +45,8 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><!--<form action="editar.php" action="POST">
+                        <td>
+                            <!--<form action="editar.php" action="POST">
                             <a href="editar.php?id=<?php //echo $row[0];?>"><input type="button" value="editar"></a>
                             <input type="hidden" name="id" value="<?php //echo $row[0]; ?>"/>
                             <input type="submit" value="aceptar"/>
