@@ -9,44 +9,53 @@
         <a href="">Gestion Usuarios</a>
 <?php }
 
-    function MuestraUsuarioBusqueda(){
+    function MuestraUsuarioBusqueda($nombre,$orden){
         $bd=sqlite_open();
         $i=0;
-	if($nombre==NULL)
-		$cons=$bd->query("SELECT * FROM usuarios");
-	else
-		$cons=$bd->query("SELECT * from usuarios where usuarios.nombre like %$nombre% order by $orden");
-	
-	while($row=$cons->fetchArray()){
+        if($orden==NULL){
+            $orden="nombre";
+        }
+	if ($nombre == NULL) {
+                $cons = $bd->query("SELECT * FROM usuarios order by $orden");
+
+        } else {
+            $cons = $bd->query("SELECT * from usuarios where nombre like '%$nombre%' or apellidos like '%$nombre%' order by $orden");
+        }
+
+            while($row=$cons->fetchArray()){
             if($i%2==0){
 		?><tr id="FilaPar">
+                        <td><?php echo $row[0];?></td>
 			<td><?php echo $row[1];?></td>
 			<td><?php echo $row[2];?></td>
                         <td><?php echo $row[3];?></td>
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-			<td><a href="editar.php?id=<?php echo $id;?>"><input type="button" value="editar"></a></td>
+			<td><a href="editar.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
 			<td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar"></a></td>
 			<td></td>
             </tr>
       <?php }else{?>
                 <tr>
+                    <td><?php echo $row[0];?></td>
 			<td><?php echo $row[1];?></td>
 			<td><?php echo $row[2];?></td>
                         <td><?php echo $row[3];?></td>
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><a href="editar.php?id=<?echo $row[0];?>"><input type="button" value="editar"></a></td>
-			<td><a href=<?php borrarUsuario($row[0]);?>><input type="button" value="borrar"></a></td>
-            </tr>
+                        <td><a href="editar.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
+                        <td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar"></a></td>
+			
+                </tr>
             <?php }
             $i+=1;
 	}
 }
 function borrarUsuario($id){
+    echo $id;
     $bd=sqlite_open();
-    
+    $bd->query("DELETE FROM usuarios WHERE id=$id");
 }
 ?>

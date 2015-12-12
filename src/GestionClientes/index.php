@@ -4,6 +4,7 @@
     Ejemplo comunicaci�n jQuery con JSON.
 -->
 <?php include_once ("backend.php");?>
+
 <html>
     <head>
         <title>usuarios</title>
@@ -20,20 +21,21 @@
 			<?php muestraBanner();?>
                     </div>
                     <div id="centre_princ">
-                        <form>
-                            <input type=""/>
-                            <input type="submit" value="buscar" name="aceptar" onClick=""></input>
+                        <form method="get">
+                            <input type="text" id="nombre" name="nombre"/>
+                            <input type="submit" value="buscar"/>
                             <table border="1">
                                 <tr>
-                                <td><a href="">Nombre</a></td>
-                                    <td>apellidos</td>
-                                    <td>correo elecronico</td>
-                                    <td>contrase&ntilde;a</td>
-                                    <td>Fecha de nacimiento</td>
-                                    <td>Fecha de registro</td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=id">id</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=nombre">Nombre</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=apellidos">apellidos</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=correoElectronico">correo elecronico</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=contrasena">contrase&ntilde;a</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaNac">Fecha de nacimiento</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaReg">Fecha de registro</a></td>
                                     <td colspan="2">acciones</td>
                                 </tr>
-                                <?php MuestraUsuarioBusqueda();?>
+                                <?php MuestraUsuarioBusqueda($_GET['nombre'],$_GET['orden']);?>
                             </table>
                         </form>
                         <input type="button" value="a&ntilde;adir usuario"/>
