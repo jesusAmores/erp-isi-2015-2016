@@ -32,7 +32,7 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-			<td><a href="editar.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
+			<td><a href="usuario.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
 			<td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar"></a></td>
 			<td></td>
             </tr>
@@ -45,7 +45,13 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><a href="editar.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
+                        <td><!--<form action="editar.php" action="POST">
+                            <a href="editar.php?id=<?php //echo $row[0];?>"><input type="button" value="editar"></a>
+                            <input type="hidden" name="id" value="<?php //echo $row[0]; ?>"/>
+                            <input type="submit" value="aceptar"/>
+                        </form>-->
+                            <a href="usuario.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a>
+                        </td>
                         <td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar"></a></td>
 			
                 </tr>
