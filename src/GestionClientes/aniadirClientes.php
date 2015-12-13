@@ -6,7 +6,20 @@
             $handle = new SQLite3('usuario.db');
             return $handle;
         }
-
+        function getId(){
+            $id=1;
+            $cons=sqlite_open()->query("select id from usuarios");
+            while($row=$cons->fetchArray()){
+                
+                if($id<$row[0]){
+                    $id=$row[0];
+                }
+            }
+            return $id+1;
+        }
+        setlocale(LC_ALL,"es_ES");
+        $fecha=getdate();
+        $id=getId();
     ?>
     
     <body>
@@ -15,7 +28,7 @@
             <table>
                  <tr>
                      <td>id:</td>
-                     <td><input type="text" name="id"/></td>
+                     <td><input type="text" name="id" readonly="true" value="<?php echo $id;?>"/></td>
                  </tr>
                  <tr>
                      <td>nombre:</td>
@@ -39,7 +52,7 @@
                  </tr>
                  <tr>
                      <td>Fecha de registro</td>
-                     <td><input type="text" name="fechaReg"/></td>
+                     <td><input type="text" readonly="true" name="fechaReg" value="<?php echo $fecha['mday']."/".$fecha['mon']."/".$fecha['year'];?>"/></td>
                  </tr>
                  <tr>
                      <td>Valido</td>
@@ -50,14 +63,11 @@
             <input type="submit" name="enviar" value="A&ntilde;adir cliente">
             <td><a href="index.php?"><input type="button" value="finalizar"></a></td>
             <?php
-              
+              setlocale(LC_ALL,"es_ES");
+              $fecha=getdate();
                     $bd=sqlite_open();
-                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
                     
-                                   
-                    
-                    
-                
+                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','".$fecha['mday']."/".$fecha['mon']."/".$fecha['year']."','{$_POST['valido']}')");
                 
             ?>
         </form>
