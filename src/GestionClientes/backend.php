@@ -48,7 +48,7 @@
                         <td>
                             <a href="editarCliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a>
                         </td>
-                        <td><a href="borrar.php?id=<?phpecho $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
+                        <td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
 			
                 </tr>
             <?php }
@@ -66,7 +66,7 @@ function getId(){
             return $id+1;
         }
 
-function insertaCliente(){
+function insertaCliente($nombre,$apellidos,$correo,$pass,$fechaNac,$fechaReg,$valido){
     $bd=sqlite_open();
     $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
 
