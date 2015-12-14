@@ -32,9 +32,9 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><a href="cliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
-			<td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
-			<td></td>
+                        <td><a href="cliente.php?id=<?php echo $row[0];?>"><img src="images/editausu.jpg" alt="editar usuario" width="25" height="25"></img></a></td>
+			<td><a href="borrar.php?id=<?php echo $row[0];?>"><img src="images/borrausu.png" alt="borrar usuario" width="25" height="25" value="borrar" name="borrar"></a></td>
+			
             </tr>
       <?php }else{?>
                 <tr>
@@ -45,11 +45,8 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td>
-                            <a href="cliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a>
-                        </td>
-                        <td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
-			
+                        <td><a href="cliente.php?id=<?php echo $row[0];?>"><img src="images/editausu.jpg" alt="editar usuario" width="25" height="25" value="editar"/></a></td>
+			<td><a href="borrar.php?id=<?php echo $row[0];?>"><img src="images/borrausu.png" alt="borrar usuario" width="25" height="25"  value="borrar" name="borrar"></a></td>
                 </tr>
             <?php }
             $i+=1;
