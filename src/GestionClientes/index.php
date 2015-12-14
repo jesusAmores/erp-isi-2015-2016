@@ -36,10 +36,15 @@
                                     <td colspan="2">acciones</td>
                                 </tr>
                                 <?php MuestraUsuarioBusqueda($_GET['nombre'],$_GET['orden']);?>
+                                
                             </table>
                         </form>
-                        <!--<input type="button" value="a&ntilde;adir usuario"/>-->
-                        <td><a href="cliente.php?"><input type="button" value="a&ntilde;adir usuario"></a></td>
+                        <span id="botonAniadir">
+                            <a href="cliente.php?"><img src="images/anadeusu.jpg" alt="borrar usuario" width="50" height="50"/></a>
+                            
+                        </span>
+                                   
+
                     </div>
 		</div>
             </center>
