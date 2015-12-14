@@ -1,5 +1,7 @@
-<html>
-    <head></head>
+<html id="htmlAniadir">
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilo.css" title="default">
+    </head>
     <?php 
     
         function sqlite_open(){
@@ -22,46 +24,47 @@
         $id=getId();
     ?>
     
-    <body>
+    <body id="bodyAniadir">
  
-         <form action="" method="post">
+        <h2 id = "titAniadir">A&ntilde;adir cliente</h2>
+         <form id ="aniadirCliente" action="" method="post">
             <table>
                  <tr>
-                     <td>id:</td>
+                     <td>Id:</td>
                      <td><input type="text" name="id" readonly="true" value="<?php echo $id;?>"/></td>
                  </tr>
                  <tr>
-                     <td>nombre:</td>
+                     <td>Nombre:</td>
                      <td><input type="text" name="nombre"/></td>
                  </tr>
                  <tr>
-                     <td>apellidos</td>
+                     <td>Apellidos:</td>
                      <td><input type="text" name="apellidos"/></td>
                  </tr>
                  <tr>
-                     <td>correo Electronico</td>
+                     <td>Correo electronico:</td>
                      <td><input type="text" name="correoElectronico"/></td>
                  </tr>
                  <tr>
-                     <td>Contrase&ntilde;a</td>
+                     <td>Contrase&ntilde;a:</td>
                      <td><input type="text" name="contrasena"/></td>
                  </tr>
                  <tr>
-                     <td>Fecha de nacimiento</td>
+                     <td>Fecha de nacimiento:</td>
                      <td><input type="text" name="fechaNac"/></td>
                  </tr>
                  <tr>
-                     <td>Fecha de registro</td>
+                     <td>Fecha de registro:</td>
                      <td><input type="text" readonly="true" name="fechaReg" value="<?php echo $fecha['mday']."/".$fecha['mon']."/".$fecha['year'];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Valido</td>
+                     <td>Valido:</td>
                      <td><input type="text" name="valido"/></td>
                  </tr>
             </table>
             
-            <input type="submit" name="enviar" value="A&ntilde;adir cliente">
-            <td><a href="index.php?"><input type="button" value="finalizar"></a></td>
+            <input id="enviarButton" type="submit" name="enviar" value="A&ntilde;adir cliente">
+            <button id="finalizarButton" href="index.php?">finalizar</button>
             <?php
                 if($_POST['nombre']!=''){
                     $bd=sqlite_open();
@@ -69,7 +72,9 @@
                 }
             ?>
         </form>
+      
     </body>
+
         
     
 </html>
