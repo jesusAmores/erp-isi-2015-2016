@@ -131,3 +131,29 @@
 #divFechaRegistro{}
 #divfechaNac{}
 #divpass{}
+
+/*aniadirClientes*/
+#body {
+    margin-top: 5%;
+}
+
+#titAniadir{
+    padding-left: 40%;
+}
+
+#aniadirCliente{
+    padding-left: 33%;
+}
+
+#enviarButton{
+    width: 205px;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+#finalizarButton{
+    width: 205px;
+    margin-top: 10px;
+    padding: 8px;
+}
+
