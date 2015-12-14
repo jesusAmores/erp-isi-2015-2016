@@ -1,5 +1,7 @@
 /*pagina de registro*/
-
+body{
+    background-color: blue;
+}
 .total{
 	width:100%;
 	height:100%;

@@ -40,7 +40,7 @@
                             </table>
                         </form>
                         <span id="botonAniadir">
-                            <a href="cliente.php?"><img src="images/anadeusu.jpg" alt="borrar usuario" width="50" height="50"/></a>
+                            <a href="cliente.php?"><img src="images/anadeusu.png" alt="borrar usuario" width="50" height="50"/></a>
                             
                         </span>
                                    
