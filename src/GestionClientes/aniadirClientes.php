@@ -17,7 +17,7 @@
             }
             return $id+1;
         }
-        date_default_timezone_set();
+        date_default_timezone_set('Europe/Paris');
         $fecha=getdate();
         $id=getId();
     ?>
