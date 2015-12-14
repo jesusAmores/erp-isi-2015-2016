@@ -3,25 +3,10 @@
         <link rel="stylesheet" type="text/css" href="estilo.css" title="default">
     </head>
     <?php 
-    
-        function sqlite_open(){
-            $handle = new SQLite3('usuario.db');
-            return $handle;
-        }
-        function getId(){
-            $id=1;
-            $cons=sqlite_open()->query("select id from usuarios");
-            while($row=$cons->fetchArray()){
-                
-                if($id<$row[0]){
-                    $id=$row[0];
-                }
-            }
-            return $id+1;
-        }
+        include './backend.php';
+        
         date_default_timezone_set('Europe/Paris');
         $fecha=getdate();
-        $id=getId();
     ?>
     
     <body id="bodyAniadir">
@@ -31,7 +16,7 @@
             <table>
                  <tr>
                      <td>Id:</td>
-                     <td><input type="text" name="id" readonly="true" value="<?php echo $id;?>"/></td>
+                     <td><input type="text" name="id" readonly="true" value="<?php echo getId();?>"/></td>
                  </tr>
                  <tr>
                      <td>Nombre:</td>
@@ -64,7 +49,7 @@
             </table>
             
             <input id="enviarButton" type="submit" name="enviar" value="A&ntilde;adir cliente">
-            <button id="finalizarButton" href="index.php?">finalizar</button>
+            <a href="index.php?"><input type="button"id="finalizarButton" value="Cancelar"/></a>
             <?php
                 if($_POST['nombre']!=''){
                     $bd=sqlite_open();
