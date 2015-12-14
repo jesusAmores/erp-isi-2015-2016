@@ -1,6 +1,6 @@
 /*pagina de registro*/
 body{
-    background-color: blue;
+    background-color: #b8c7d1;
 }
 .total{
 	width:100%;
@@ -124,22 +124,12 @@ body{
     background-color: grey;
 }
 
-.usuario{
-    position:relative;
-    background-color: red;
-}
-#idNombre{}
-#divApellido{}
-#divCorreo{}
-#divFechaRegistro{}
-#divfechaNac{}
-#divpass{}
+
 
 /*Cliente*/
 #htmlCliente{
     height: 100%;
-    background-color: #b8c7d1;
-    background-color: #b8c7d1;
+   
 }
 
 #bodyContainer{ 
