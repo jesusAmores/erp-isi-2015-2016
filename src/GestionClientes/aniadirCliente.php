@@ -4,7 +4,6 @@
     </head>
     <?php 
         include './backend.php';
-        
         date_default_timezone_set('Europe/Paris');
         $fecha=getdate();
     ?>
@@ -53,7 +52,7 @@
             <?php
                 if($_POST['nombre']!=''){
                     $bd=sqlite_open();
-                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
+                    
                 }
             ?>
         </form>
