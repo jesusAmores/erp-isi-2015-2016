@@ -6,7 +6,16 @@
         return $handle;
     } 
     function muestraBanner(){?>
-        <a href="">Gestion Usuarios</a>
+        
+    
+<a href="">Gestion usuarios</a>
+            <a href="">Catalogo productos</a>
+            <a href="">Gestion clientes</a>
+            <a href="">Gestion empleados</a>
+            <a href="">Gestion pedidos</a>
+            <a href="">Informes comerciales</a>
+            <a href="">Nominas</a>
+
 <?php }
 
     function MuestraUsuarioBusqueda($nombre,$orden){

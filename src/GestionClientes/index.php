@@ -21,7 +21,7 @@
 			<?php muestraBanner();?>
                     </div>
                     <div id="centre_princ">
-                        <form method="get">
+                        <form method="get">Buscar por nombre / Apellido: 
                             <input type="text" id="nombre" name="nombre"/>
                             <input type="submit" value="buscar"/>
                             <table border="1">
