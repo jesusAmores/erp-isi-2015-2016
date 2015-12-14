@@ -32,7 +32,7 @@
                         <td><?php echo $row[4];?></td>
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
-                        <td><a href="editarCliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
+                        <td><a href="cliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a></td>
 			<td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
 			<td></td>
             </tr>
@@ -46,7 +46,7 @@
                         <td><?php echo $row[5];?></td>
                         <td><?php echo $row[6];?></td>
                         <td>
-                            <a href="editarCliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a>
+                            <a href="cliente.php?id=<?php echo $row[0];?>"><input type="button" value="editar"></a>
                         </td>
                         <td><a href="borrar.php?id=<?php echo $row[0];?>"><input type="button" value="borrar" name="borrar"></a></td>
 			
