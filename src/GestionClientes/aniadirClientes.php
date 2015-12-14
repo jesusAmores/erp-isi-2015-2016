@@ -17,7 +17,7 @@
             }
             return $id+1;
         }
-        setlocale(LC_ALL,"es_ES");
+        date_default_timezone_set();
         $fecha=getdate();
         $id=getId();
     ?>
@@ -63,12 +63,10 @@
             <input type="submit" name="enviar" value="A&ntilde;adir cliente">
             <td><a href="index.php?"><input type="button" value="finalizar"></a></td>
             <?php
-              setlocale(LC_ALL,"es_ES");
-              $fecha=getdate();
+                if($_POST['nombre']!=''){
                     $bd=sqlite_open();
-                    
-                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','".$fecha['mday']."/".$fecha['mon']."/".$fecha['year']."','{$_POST['valido']}')");
-                
+                    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
+                }
             ?>
         </form>
     </body>
