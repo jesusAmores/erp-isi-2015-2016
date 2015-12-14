@@ -132,24 +132,25 @@
 #divfechaNac{}
 #divpass{}
 
-/*aniadirClientes*/
-#htmlAniadir{
+/*Cliente*/
+#htmlCliente{
     height: 100%;
+    background-color: #b8c7d1;
     background-color: #b8c7d1;
 }
 
-#bodyAniadir{
+#bodyContainer{ 
     margin-left: 16%;
     margin-right: 20%;
     margin-top: 5%;
     border: 5px;
 }
 
-#titAniadir{
+#titulo{
     padding-left: 40%;
 }
 
-#aniadirCliente{
+#cuerpoTabla{
     margin-left: 26%;
 }
 
@@ -164,6 +165,4 @@
     margin-top: 10px;
     padding: 8px;
 }
-
-
 

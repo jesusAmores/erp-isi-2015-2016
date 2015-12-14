@@ -1,4 +1,4 @@
-<html>
+<html id="htmlCliente">
     <?php 
     
        require './backend.php';
@@ -8,62 +8,61 @@
         $cons = $bd->query("SELECT * from usuarios where id=$_GET[id]");
         while($row=$cons->fetchArray()){
     ?>
-    <head> EDITAR CLIENTE</head>
-    <body>
- 
-         <form action="editar.php" method="post">
+    <head> 
+        <link rel="stylesheet" type="text/css" href="estilo.css" title="default">
+    </head>
+    <body id="bodyContainer">
+        <h2 id="titulo">Editar Cliente</h2>
+         <form id="cuerpoTabla" action="editar.php" method="post">
             <table>
                  <tr>
-                     <td>id:</td>
+                     <td>Id:</td>
                      <td><input type="text" name="id" readonly="true" value="<?php echo $row[0];?>"/></td>
                  </tr>
                  <tr>
-                     <td>nombre:</td>
+                     <td>Nombre:</td>
                      <td><input type="text" name="nombre" value="<?php echo $row[1];?>"/></td>
                  </tr>
                  <tr>
-                     <td>apellidos</td>
+                     <td>Apellidos:</td>
                      <td><input type="text" name="apellidos" value="<?php echo $row[2];?>"/></td>
                  </tr>
                  <tr>
-                     <td>correo Electronico</td>
+                     <td>Correo electronico:</td>
                      <td><input type="text" name="correoElectronico" value="<?php echo $row[3];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Contrase&ntilde;a</td>
+                     <td>Contrase&ntilde;a:</td>
                      <td><input type="text" name="contrasena" value="<?php echo $row[4];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Fecha de nacimiento</td>
+                     <td>Fecha de nacimiento:</td>
                      <td><input type="text" name='fechaNac' value="<?php echo $row[5];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Fecha de registro</td>
+                     <td>Fecha de registro:</td>
                      <td><input type="text" name="fechaReg" value="<?php echo $row[6];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Valido</td>
+                     <td>Valido:</td>
                      <td><input type="text" name="valido" value="<?php echo $row[7];}?>"/></td>
                  </tr>
-                 <tr>
-                    <td>
-                        <input type="submit" name="enviar" value="Actualizar cliente">
-                     <a href="index.php?"><input type="button" value="Cancelar"/></a>
-                    </td>
-                   
-                 </tr>
             </table>
-             
+                <input id="enviarButton" type="submit" name="enviar" value="Actualizar cliente">
+                <a href="index.php?"><input type="button" id="finalizarButton" value="Cancelar"/></a>
         </form>
     </body>
    <?php }else{
            date_default_timezone_set('Europe/Paris');
         $fecha=getdate();
        ?>
-         <body id="bodyAniadir">
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilo.css" title="default">
+    </head>
+        <body id="bodyContainer">
  
-        <h2 id = "titAniadir">A&ntilde;adir cliente</h2>
-        <form id ="aniadirCliente" action="aniadir.php" method="post">
+        <h2 id = "titulo">A&ntilde;adir Cliente</h2>
+        <form id ="cuerpoTabla" action="aniadir.php" method="post">
             <table>
                  <tr>
                      <td>Id:</td>
@@ -100,14 +99,12 @@
             </table>
             
             <input id="enviarButton" type="submit" name="enviar" value="A&ntilde;adir cliente">
-            <a href="index.php?"><input type="button"id="finalizarButton" value="Cancelar"/></a>
+            <a href="index.php?"><input type="button" id="finalizarButton" value="Cancelar"/></a>
            
         </form>
       
     </body>  
-           
-           
-           
+ 
            <?php
    }?>
     
