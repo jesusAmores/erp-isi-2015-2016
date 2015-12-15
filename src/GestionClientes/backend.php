@@ -25,10 +25,10 @@
             $orden="id";
         }
 	if ($nombre == NULL) {
-                $cons = $bd->query("SELECT * FROM usuarios order by $orden");
+                $cons = $bd->query("SELECT * FROM clientes order by $orden");
 
         } else {
-            $cons = $bd->query("SELECT * from usuarios where nombre like '%$nombre%' or apellidos like '%$nombre%' order by $orden");
+            $cons = $bd->query("SELECT * from clientes where nombre like '%$nombre%' or apellidos like '%$nombre%' order by $orden");
         }
 
             while($row=$cons->fetchArray()){
@@ -63,7 +63,7 @@
 }
 function getId(){
             $id=1;
-            $cons=sqlite_open()->query("select id from usuarios");
+            $cons=sqlite_open()->query("select id from clientes");
             while($row=$cons->fetchArray()){
                 if($id<$row[0]){
                     $id=$row[0];
@@ -74,12 +74,12 @@ function getId(){
 
 function insertaCliente($nombre,$apellidos,$correo,$pass,$fechaNac,$fechaReg,$valido){
     $bd=sqlite_open();
-    $bd->query("INSERT INTO usuarios(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
+    $bd->query("INSERT INTO clientes(nombre,apellidos,correoElectronico,contrasena,fechaNac,fechaReg,valido) VALUES('{$_POST['nombre']}','{$_POST['apellidos']}','{$_POST['correoElectronico']}','{$_POST['contrasena']}','{$_POST['fechaNac']}','{$_POST['fechaReg']}','{$_POST['valido']}')");
 
 }
 function editarCliente($nombre,$apellidos,$correo,$pass,$fechaNac,$fechaReg,$valido,$id){
     $bd=sqlite_open();
-    $bd->query("UPDATE usuarios "
+    $bd->query("UPDATE clientes "
                             . "SET nombre='{$nombre}',"
                             . "apellidos='{$apellidos}', "
                             . "correoElectronico='{$correo}', "
@@ -88,6 +88,5 @@ function editarCliente($nombre,$apellidos,$correo,$pass,$fechaNac,$fechaReg,$val
                             . "fechaReg='{$fechaReg}',"
                             . "valido='{$valido}'"
                             . "WHERE id=".$id);
-                    //header("location:index.php");
 }
 ?>

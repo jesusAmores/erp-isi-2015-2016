@@ -5,7 +5,7 @@
         
         $bd=sqlite_open();
         if($_GET['id']!=null){
-        $cons = $bd->query("SELECT * from usuarios where id=$_GET[id]");
+        $cons = $bd->query("SELECT * from clientes where id=$_GET[id]");
         while($row=$cons->fetchArray()){
     ?>
     <head> 
