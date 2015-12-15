@@ -28,7 +28,7 @@
                      <td><input type="text" name="apellidos" value="<?php echo $row[2];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Correo electronico:</td>
+                     <td>Correo electrónico:</td>
                      <td><input type="text" name="correoElectronico" value="<?php echo $row[3];?>"/></td>
                  </tr>
                  <tr>
@@ -44,7 +44,7 @@
                      <td><input type="text" name="fechaReg" value="<?php echo $row[6];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Valido:</td>
+                     <td>Válido:</td>
                      <td><input type="text" name="valido" value="<?php echo $row[7];}?>"/></td>
                  </tr>
             </table>
@@ -77,7 +77,7 @@
                      <td><input type="text" name="apellidos"/></td>
                  </tr>
                  <tr>
-                     <td>Correo electronico:</td>
+                     <td>Correo electrónico:</td>
                      <td><input type="text" name="correoElectronico"/></td>
                  </tr>
                  <tr>
@@ -93,7 +93,7 @@
                      <td><input type="text" readonly="true" name="fechaReg" value="<?php echo $fecha['mday']."/".$fecha['mon']."/".$fecha['year'];?>"/></td>
                  </tr>
                  <tr>
-                     <td>Valido:</td>
+                     <td>Válido:</td>
                      <td><input type="text" name="valido"/></td>
                  </tr>
             </table>

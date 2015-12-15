@@ -21,19 +21,19 @@
 			<?php muestraBanner();?>
                     </div>
                     <div id="centre_princ">
-                        <form method="get">Buscar por nombre / Apellido: 
+                        <form method="get">Buscar por Nombre / Apellido: 
                             <input type="text" id="nombre" name="nombre"/>
-                            <input type="submit" value="buscar"/>
+                            <input type="submit" value="Buscar"/>
                             <table border="1">
                                 <tr>
                                     <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=id">id</a></td>
                                     <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=nombre">Nombre</a></td>
-                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=apellidos">apellidos</a></td>
-                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=correoElectronico">correo elecronico</a></td>
-                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=contrasena">contrase&ntilde;a</a></td>
-                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaNac">Fecha de nacimiento</a></td>
-                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaReg">Fecha de registro</a></td>
-                                    <td colspan="2">acciones</td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=apellidos">Apellidos</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=correoElectronico">Correo Electrónico</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=contrasena">Contrase&ntilde;a</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaNac">Fecha de Nacimiento</a></td>
+                                    <td><a href="index.php?nombre=<?php echo $_GET['nombre']?>&orden=fechaReg">Fecha de Registro</a></td>
+                                    <td colspan="2">Acciones</td>
                                 </tr>
                                 <?php MuestraUsuarioBusqueda($_GET['nombre'],$_GET['orden']);?>
                                 

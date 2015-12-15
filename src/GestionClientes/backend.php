@@ -1,5 +1,4 @@
 <?php
-        // put your code here
 
     function sqlite_open(){
         $handle = new SQLite3('cliente.db');
@@ -8,13 +7,13 @@
     function muestraBanner(){?>
         
     
-<a href="">Gestion usuarios</a>
-            <a href="">Catalogo productos</a>
-            <a href="">Gestion clientes</a>
-            <a href="">Gestion empleados</a>
-            <a href="">Gestion pedidos</a>
-            <a href="">Informes comerciales</a>
-            <a href="">Nominas</a>
+<a href="">Gestión usuarios</a> /
+<a href="">Catálogo productos</a> /
+<a href="">Gestión clientes</a> /
+<a href="">Gestión empleados</a> /
+<a href="">Gestión pedidos</a> /
+<a href="">Informes comerciales</a> /
+<a href="">Nóminas</a>
 
 <?php }
 
