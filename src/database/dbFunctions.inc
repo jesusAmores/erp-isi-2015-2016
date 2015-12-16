@@ -21,8 +21,10 @@
  *  @license     http://www.gnu.org/licenses/gpl.txt
  *  @source code https://github.com/jmcolmenar/erp-isi-2015-2016
  */
+include_once(filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING).'/src/database/dbAccess.inc');
+include_once(filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING).'/src/database/ProductsSqliteUtils.inc');
 
-include_once 'dbAccess.inc';
+ProductsSqliteUtils::init();
 
 function check_login($user, $pass) {
     $db = new DbAccess();
@@ -32,4 +34,24 @@ function check_login($user, $pass) {
     } else {
         return false;
     }
+}
+
+function productsListOrderBy($sortRule) {
+    return ProductsSqliteUtils::fetchProductsOrderedBy($sortRule);
+}
+
+function productsList() {
+    return ProductsSqliteUtils::fetchProducts();
+}
+
+function addProduct($name,$price) {
+    return ProductsSqliteUtils::insertProduct($name,$price);
+}
+
+function modifyProduct($idp,$name,$price) {
+    return ProductsSqliteUtils::updateProduct($idp,$name,$price);
+}
+
+function removeProduct($idp) {
+    return ProductsSqliteUtils::deleteProduct($idp);
 }
